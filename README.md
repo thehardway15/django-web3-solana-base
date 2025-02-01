@@ -72,6 +72,37 @@ npm run dev
 
 The frontend will be available at `http://localhost:5173`.
 
+## Docker Setup (Recommended)
+
+The easiest way to get started is using Docker Compose:
+
+1. Make sure you have Docker and Docker Compose installed
+2. Clone the repository
+3. Start the services:
+```bash
+docker compose up --build
+```
+
+This will start:
+- Backend server at http://localhost:8000
+- Frontend development server at http://localhost:5173
+- PostgreSQL database at localhost:5432
+
+For development:
+- Backend code changes will auto-reload
+- Frontend code changes will trigger hot-reload
+- Database data persists in a Docker volume
+
+To stop the services:
+```bash
+docker compose down
+```
+
+To remove all data including the database volume:
+```bash
+docker compose down -v
+```
+
 ## Usage
 
 1. Open the application in your browser
